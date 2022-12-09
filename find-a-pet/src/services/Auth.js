@@ -48,3 +48,12 @@ export const UpdateComment = async (data) => {
     throw error
   }
 }
+
+export const DestroyComment = async (data) => {
+  try {
+    const res = await Client.delete(`/comment/${data.commentId}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
