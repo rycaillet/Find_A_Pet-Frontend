@@ -39,3 +39,12 @@ export const CreateComment = async (data) => {
     throw error
   }
 }
+
+export const UpdateComment = async (data) => {
+  try {
+    const res = await Client.put(`/comment/${data.commentId}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
