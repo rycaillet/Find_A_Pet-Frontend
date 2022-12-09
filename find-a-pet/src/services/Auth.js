@@ -27,3 +27,15 @@ export const CheckSession = async () => {
     throw error
   }
 }
+
+export const CreateComment = async (data) => {
+  try {
+    const res = await Client.post(
+      `/comment/new_comment/user/${data.userId}/listing/${data.listingId}`,
+      data
+    )
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
