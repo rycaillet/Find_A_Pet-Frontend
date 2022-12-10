@@ -2,6 +2,11 @@ import './index.css'
 import { Routes, Route } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { CheckSession } from './services/Auth'
+import Nav from './components/Nav'
+import AboutUs from './Pages/AboutUs'
+import Register from './Pages/Register'
+import Login from './Pages/Login'
+import Home from './Pages/Home'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -29,13 +34,33 @@ function App() {
   return (
     <div>
       <div>
-        <header></header>
+        <header>
+          <Nav
+            authenticated={authenticated}
+            user={user}
+            handleLogOut={handleLogOut}
+          />
+        </header>
         <main>
-          <Routes></Routes>
+          <Routes>
+            <Route
+              index
+              element={<Home user={user} authenticated={authenticated} />}
+            />
+            <Route path="/register" element={<Register />} />
+            <Route
+              path="/login"
+              element={
+                <Login
+                  setUser={setUser}
+                  toggleAuthenticated={toggleAuthenticated}
+                />
+              }
+            />
+            <Route path="/about_us" element={<AboutUs />} />
+          </Routes>
         </main>
-        <footer>
-          <Footer />
-        </footer>
+        <footer>{/* <Footer /> */}</footer>
       </div>
     </div>
   )

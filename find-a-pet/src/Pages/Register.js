@@ -20,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await RegisterUser({
-      username: formValues.username,
+      userName: formValues.userName,
       password: formValues.password
     })
     setFormValues(initialFormValues)
@@ -28,32 +28,36 @@ const Register = () => {
   }
 
   return (
-    <div className="signin col">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <label className="label" htmlFor="username">
+    <body className="login-box">
+      <h2>Register</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="user-box">
+          <label className="label" htmlFor="userName">
             Username
           </label>
           <input
             className="input"
             onChange={handleChange}
-            name="username"
+            name="userName"
             type="text"
             placeholder="username"
-            value={formValues.username}
+            value={formValues.userName}
             required
           />
-          <label className="label" htmlFor="password">
-            Password
-          </label>
+        </div>
+        <div className="user-box">
+          <label htmlFor="password">Password</label>
           <input
             className="input"
             onChange={handleChange}
             type="password"
             name="password"
+            placeholder="password"
             value={formValues.password}
             required
           />
+        </div>
+        <div className="user-box">
           <label className="label" htmlFor="confirmPassword">
             Confirm Password
           </label>
@@ -61,25 +65,29 @@ const Register = () => {
             className="input"
             onChange={handleChange}
             type="password"
+            placeholder="confirm password"
             name="confirmPassword"
             value={formValues.confirmPassword}
             required
           />
+        </div>
+        <div className="button-form">
           <button
             disabled={
               !formValues.userName ||
               (!formValues.password &&
                 formValues.confirmPassword === formValues.password)
             }
+            id="submit"
           >
-            Register
+            Submit
           </button>
-        </form>
-        <Link to={'/login'}>
-          <button>Already A User?</button>
-        </Link>
-      </div>
-    </div>
+          <Link to={'/login'}>
+            <button id="submit2">Already A User?</button>
+          </Link>
+        </div>
+      </form>
+    </body>
   )
 }
 
