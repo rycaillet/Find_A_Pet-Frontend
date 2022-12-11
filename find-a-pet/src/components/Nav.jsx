@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
+
 const Nav = ({ authenticated, user, handleLogOut }) => {
     let userOptions;
     if (user) {
@@ -21,7 +22,6 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
                     <NavLink onClick={handleLogOut} to='/login' className='nav-link'>Log Out</NavLink>
                 </nav>
                 </div>
-
             </header>
         );
     }

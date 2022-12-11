@@ -7,6 +7,7 @@ import AboutUs from './Pages/AboutUs'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Home from './Pages/Home'
+import Footer from './components/Footer'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -60,7 +61,9 @@ function App() {
             <Route path="/about_us" element={<AboutUs />} />
           </Routes>
         </main>
-        <footer>{/* <Footer /> */}</footer>
+        <footer>
+          <Footer authenticated={authenticated} user={user} />
+        </footer>
       </div>
     </div>
   )

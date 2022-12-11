@@ -28,7 +28,7 @@ const Login = ({ toggleAuthenticated, setUser }) => {
             onChange={handleChange}
             name="userName"
             type="userName"
-            placeholder="Username"
+            placeholder="username"
             value={formValues.userName}
             className="input"
             required
@@ -40,7 +40,7 @@ const Login = ({ toggleAuthenticated, setUser }) => {
             onChange={handleChange}
             type="password"
             name="password"
-            placeholder="*********"
+            placeholder="password"
             value={formValues.password}
             className="input"
             required

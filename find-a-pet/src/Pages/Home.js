@@ -1,19 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Home = (user, authenticated) => {
+const Home = ({ user, authenticated }) => {
   const navigate = useNavigate()
   return user && authenticated ? (
     <div>
       <header id="showcase">
-        <h1>
-          Welcome to Find A Pet!
-          {/* <img
-            src="/images/Find_A_Pet-logo1.png"
-            alt="website logo"
-            id="home-logo"
-          /> */}
-        </h1>
+        <h1>Welcome to Find A Pet!</h1>
         <p>
           There are pets all over the world who are lost and starving waiting to
           be found...
@@ -23,13 +16,22 @@ const Home = (user, authenticated) => {
           help of course.
         </p>
         <p>
-          If you click on Find A Pet, you should be able to see a listing of
-          pets who are currently lost and your comment could help save them
+          If you click on Lost Ones, you should be able to see a listing of pets
         </p>
+        <p>who are currently lost and your comment could help save them</p>
         <button id="read-me-button" onClick={() => navigate('/about_us')}>
           Read More
         </button>
       </header>
+      <h2 id="reunited">Reunited Loved Ones</h2>
+      <div className="gallery">
+        <img src="./images/frenchie-pic.png" alt="frenchie" />
+        <img src="./images/dogs-reunited.png" alt="dogs-reunited" />
+        <img src="./images/dogs-reunited2.png" alt="dogs-reunited2" />
+        <img src="./images/dogs-on-fence.png" alt="dogs-on-fence" />
+        <img src="./images/cat-photo.png" alt="cat-photo" />
+        <img src="./images/two-pitbulls.png" alt="pitbulls-photo" />
+      </div>
     </div>
   ) : (
     <div className="protected">
