@@ -10,6 +10,8 @@ import Home from './Pages/Home'
 import Footer from './components/Footer'
 import LostOnesCard from './Pages/LostOnesCard'
 import LostOnesDetails from './components/LostOnesDetails'
+import NewCommentForm from './Pages/NewCommentForm'
+import EditCommentForm from './Pages/EditCommentForm'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -51,7 +53,25 @@ function App() {
               element={<Home user={user} authenticated={authenticated} />}
             />
             <Route path="/listing" element={<LostOnesCard />} />
-            <Route path="/listing/:id" element={<LostOnesDetails />} />
+            <Route
+              path="/listing/:id"
+              element={
+                <LostOnesDetails user={user} authenticated={authenticated} />
+              }
+            />
+            <Route
+              path="/new_comment/user/:userId/listing/:listingId"
+              // path="/new_comment"
+              element={
+                <NewCommentForm user={user} authenticated={authenticated} />
+              }
+            />
+            <Route
+              path="/edit_comment/user/:userId/listing/:listingId/comment/:commentId"
+              element={
+                <EditCommentForm user={user} authenticated={authenticated} />
+              }
+            />
             <Route path="/register" element={<Register />} />
             <Route
               path="/login"

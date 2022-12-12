@@ -609,7 +609,7 @@ color: rgb(87, 209, 30);
   background-image: url('../public/images/details-background.png');
   background-size:cover;
   background-position: center;
-  height: 150vh;
+  height: 160vh;
 }
 
 .details-header{
@@ -649,11 +649,13 @@ color: rgb(87, 209, 30);
   justify-content: center;
   align-items: center;
   width: 50rem;
-  height: 40rem;
+  height: 38rem;
   overflow:hidden;
   border-radius: 10px;
   border: 5px solid rgb(36, 195, 22);
   background-color: rgb(251, 249, 249);
+  /* padding:3rem;
+  margin:3rem; */
 }
 
 #details-pic{
@@ -664,6 +666,7 @@ color: rgb(87, 209, 30);
   width: 38rem;
   height: 22rem;
   padding-bottom: .5rem;
+  margin-top:2px;
 }
 
 #details-name{
@@ -676,4 +679,166 @@ color: rgb(87, 209, 30);
   color: green;
   font-size:x-large;
   text-decoration: underline;
+}
+
+.comment-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid rgb(21, 49, 205);
+  height: 8rem;
+  width:60vw;
+}
+
+.comment-header{
+  display: flex;
+  flex-direction: column;
+  font-size:x-large;
+  /* padding-bottom:; */
+  /* margin: 2rem; */
+  /* color:rgb(246, 246, 246); */
+  font-weight:bolder;
+  font-size: large;
+  /* border: 1px solid rgb(250, 255, 249); */
+  /* border-radius: 10px; */
+  /* background-color: #7d7d7d; */
+  width: 25rem;
+  height: 12rem;
+  text-align: center;
+}
+
+#button-container {
+  padding-top: 10px;
+}
+
+.anonymous-posted {
+margin: 1rem 0 2rem;
+font-size: 1.8rem;
+text-decoration: underline;
+color: rgb(22, 25, 208);
+}
+
+
+#delete-edit-button {
+  padding: 2px 4px;
+  height: 2rem;
+  width: 6rem;
+  color: #CBBDDB;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 5px;
+  border: 1px solid rgb(13, 59, 211);
+  /* margin: .1rem; */
+  cursor: pointer;
+}
+
+#delete-edit-button:hover {
+  background: rgb(13, 59, 211);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+  0 0 5px rgb(13, 59, 211),
+  0 0 25px rgb(13, 59, 211),
+  0 0 50px rgb(13, 59, 211),
+  0 0 100px rgb(13, 59, 211);
+}
+
+/* New Comment Form  */
+.center {
+  position: relative;
+  padding: 50px 50px;
+  background: #fff;
+  border-radius: 10px;
+  height:70vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid dodgerblue;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.center .inputbox {
+  position: relative;
+  left: 20px;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.center .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+.center .inputbox:last-child {
+  margin-bottom: 0;
+}
+.center .inputbox span {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+}
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+.center .inputbox [type="button"] {
+  width: 50%;
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+}
+.center .inputbox:hover [type="button"] {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+#form-button {
+  padding: 4px 8px;
+  height: 2.5rem;
+  width: 10rem;
+  color: #CBBDDB;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 3px;
+  border: 1px solid rgb(13, 59, 211);
+  margin: .5rem;
+  cursor: pointer;
+}
+
+#form-button:hover {
+  background: rgb(13, 59, 211);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+  0 0 5px rgb(13, 59, 211),
+  0 0 25px rgb(13, 59, 211),
+  0 0 50px rgb(13, 59, 211),
+  0 0 100px rgb(13, 59, 211);
 }

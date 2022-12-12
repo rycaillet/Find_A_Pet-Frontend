@@ -7,7 +7,7 @@ import Comments from '../components/Comments'
 
 const Base_URL = 'http://localhost:3001/api'
 
-const LostOnesDetails = () => {
+const LostOnesDetails = ({user}) => {
   let navigate = useNavigate()
   let { id } = useParams()
 
@@ -52,20 +52,30 @@ const LostOnesDetails = () => {
             </button>
         </div>
     </main>
-    <h1>Comments</h1>
+    <header className='comment-header'>
+    <h1 className=''>Comments</h1>
+    </header>
       <section>
         {comments?.map((comment) => (
-          <Comments
+            <Comments
             id={comment?.id}
             key={comment?.id}
             userId={comment?.userId}
             listingId={comment?.listingId}
             comment={comment?.comment}
             getComments={getComments}
-          />
-        ))}
+            />
+            ))}
       </section>
-  </div>
+        <button
+            id="view-pet-button"
+            onClick={() => navigate(`/new_comment/user/${user.id}/listing/${id}`)}
+            // onClick={() => navigate(`/new_comment`)}
+            >
+            Add A Comment
+        </button>
+    </div>
+        
   )
 }
 

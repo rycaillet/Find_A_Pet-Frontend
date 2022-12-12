@@ -40,9 +40,18 @@ export const CreateComment = async (data) => {
   }
 }
 
+// export const CreateComment = async (data) => {
+//   try {
+//     const res = await Client.post(`/comment/new_comment`, data)
+//     return res.data
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
 export const UpdateComment = async (data) => {
   try {
-    const res = await Client.put(`/comment/${data.commentId}`, data)
+    const res = await Client.put(`/comment/${data.id}`, data)
     return res.data
   } catch (error) {
     throw error
@@ -51,7 +60,7 @@ export const UpdateComment = async (data) => {
 
 export const DestroyComment = async (data) => {
   try {
-    const res = await Client.delete(`/comment/${data.commentId}`, data)
+    const res = await Client.delete(`/comment/${data.id}`, data)
     return res.data
   } catch (error) {
     throw error

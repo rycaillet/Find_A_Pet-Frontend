@@ -1,0 +1,81 @@
+import React from 'react'
+import { UpdateComment } from '../services/Auth'
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import axios from 'axios'
+
+const Base_URL = 'http://localhost:3001/api'
+
+const EditCommentForm = () => {
+  let navigate = useNavigate()
+  let { listingId } = useParams()
+  let { userId } = useParams()
+  let { commentId } = useParams()
+
+  const initialState = {
+    userId: userId,
+    listingId: listingId,
+    comment: ''
+  }
+
+  const [formState, setFormState] = useState(initialState)
+
+  useEffect(() => {
+    const getCommentById = async () => {
+      const response = await axios.get(`${Base_URL}/comment/${commentId}`)
+      setFormState(response.data)
+    }
+    getCommentById()
+  }, [commentId])
+
+  //   const handleRefresh = () => {
+  //     window.location.reload(false)
+  //   }
+
+  const handleChange = (event) => {
+    setFormState({ ...formState, [event.target.id]: event.target.value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await UpdateComment({ ...formState })
+    navigate(`/listing/${listingId}`)
+    // handleRefresh()
+  }
+
+  return (
+    <div className="center">
+      <h1>Have An Update For This Pet?</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="inputbox">
+          {/* <label htmlFor="comment">
+            Write A New Comment
+          </label> */}
+          <input
+            type="description"
+            id="comment"
+            cols="55"
+            rows="10"
+            onChange={handleChange}
+            value={formState.comment}
+            required
+            placeholder="Anything helps... thank you!"
+            className="input"
+          />
+        </div>
+        <button
+          id="form-button"
+          onClick={() => navigate(`/listing/${listingId}`)}
+        >
+          Go Back
+        </button>
+        <button type="submit" id="form-button">
+          Submit
+        </button>
+        {/* <input type="button" value="submit" /> */}
+      </form>
+    </div>
+  )
+}
+
+export default EditCommentForm
