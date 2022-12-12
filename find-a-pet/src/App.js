@@ -8,6 +8,8 @@ import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Home from './Pages/Home'
 import Footer from './components/Footer'
+import LostOnesCard from './Pages/LostOnesCard'
+import LostOnesDetails from './components/LostOnesDetails'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -48,6 +50,8 @@ function App() {
               index
               element={<Home user={user} authenticated={authenticated} />}
             />
+            <Route path="/listing" element={<LostOnesCard />} />
+            <Route path="/listing/:id" element={<LostOnesDetails />} />
             <Route path="/register" element={<Register />} />
             <Route
               path="/login"

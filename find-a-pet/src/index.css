@@ -24,7 +24,7 @@ html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 20px;
 }
 ::-webkit-scrollbar-track {
@@ -34,7 +34,7 @@ html {
 ::-webkit-scrollbar-thumb {
   background:#7d7d7d;
   height: 2rem;
-}
+} */
 
 a {
   text-decoration: none;
@@ -195,6 +195,7 @@ a {
   align-items: center;
   border-bottom: 2px solid rgb(200, 198, 198);
   margin: .2rem 1%;
+  padding: .2rem;
   overflow-y: hidden;
 }
 
@@ -219,6 +220,85 @@ a {
 
 .nav-link:hover {
   color: rgb(50, 188, 19);
+}
+
+@media (max-width: 800px){
+  /*Hamburger CSS */
+   .menu_btn{
+    position: absolute;
+    top: 4.9em;
+    right: 0;
+    margin-left: -3em;
+    margin-top: -47px;
+    width:4em;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9;
+   }
+  .menu_btn div{
+    position: relative;
+    width:2.2em;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 8px;
+  transition-duration: .25s;  
+  z-index: 9;
+  }
+  
+  
+   .menu_box{
+    display: block;
+    position: fixed;
+    top:0;
+    left: 101%;
+    width: 300px;
+    height: 50%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #b48484;
+    box-shadow: 2px 2px 6px rgba(0,0,0,4);
+    transition-duration: .25s;
+    z-index: 8;
+   }
+   .nav-link{
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  
+  .nav-link:hover{
+  background-color: rgb(7, 10, 9);
+  }
+  #menu_toggle:checked + .menu_btn .top-bun{
+    transform:rotate(-45deg);
+    margin-top:25px;
+   }
+   #menu_toggle:checked + .menu_btn .bottom-bun {
+     opacity:0;
+     transform:rotate(45deg);
+    }
+    #menu_toggle:checked + .menu_btn .meat{
+     transform:rotate(45deg);
+     margin-top: -7px;
+    }
+     #menu_toggle:checked  ~ .menu_box{
+   left:52vh !important;
+    }
+  
+  .login-link{
+    font-size: 1.4rem;
+    margin: .7rem 1rem;
+    gap: .5rem;
+    padding: .2rem;
+    color: #212121;
+  }
 }
 
 /* About Us */
@@ -330,6 +410,7 @@ line-height: 3;
   text-decoration:solid;
 }
 
+
 /* footer */
 .main-footer{
   padding: 70px 0 ;
@@ -416,4 +497,183 @@ footer a{
   .com{
       padding: 20px 0;
   }
+}
+
+/* Lost Ones Card */
+
+.lostOne-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../public/images/lostOnes-background.png');
+  background-size:cover;
+  background-position: center;
+  /* height: 100vh; */
+}
+
+.lostOne-header{
+  display: flex;
+  flex-direction: column;
+  font-size:x-large;
+  padding-top: 1.6rem;
+  margin: 2rem;
+  color:rgb(246, 246, 246);
+  font-weight:bolder;
+  font-size: xx-large;
+  border: 1px solid rgb(250, 255, 249);
+  border-radius: 10px;
+  background-color: #7d7d7d;
+  width: 25rem;
+  height: 9rem;
+  text-align: center;
+}
+
+.lostOne-main{
+  display: grid; 
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto; 
+  margin: 1rem;
+  width: 100rem;
+  height: 100rem;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2px; */
+  gap: 10%;
+  margin-bottom: 10rem;
+}
+
+.lostOne-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 19rem;
+  height: 29rem;
+  overflow:hidden;
+  border-radius: 10px;
+  border: 5px solid rgb(36, 195, 22);
+  background-color: rgb(0, 0, 0);
+}
+
+#lostOne-pic{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  margin-bottom: 2rem 0 8rem;
+  width:95%;
+  height: 15rem;
+  padding-bottom: .5rem;
+}
+
+#lostOne-name{
+margin: 1rem 0 2rem;
+font-size: 3rem;
+color: rgb(87, 209, 30);
+}
+
+#view-pet-button {
+  padding: 4px 8px;
+  height: 2.5rem;
+  width: 10rem;
+  color: #CBBDDB;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 3px;
+  border: 1px solid rgb(37, 179, 75);
+  margin: 2rem;
+  cursor: pointer;
+}
+
+#view-pet-button:hover {
+  background: rgb(37, 179, 75);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+  0 0 5px rgb(37, 179, 75),
+  0 0 25px rgb(37, 179, 75),
+  0 0 50px rgb(37, 179, 75),
+  0 0 100px rgb(37, 179, 75);
+}
+
+/* Lost Ones details  */
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../public/images/details-background.png');
+  background-size:cover;
+  background-position: center;
+  height: 150vh;
+}
+
+.details-header{
+  display: flex;
+  flex-direction: column;
+  font-size:x-large;
+  padding-top: 1.6rem;
+  margin: 2rem;
+  /* color:rgb(246, 246, 246); */
+  font-weight:bolder;
+  font-size: xx-large;
+  /* border: 1px solid rgb(250, 255, 249); */
+  /* border-radius: 10px; */
+  /* background-color: #7d7d7d; */
+  width: 25rem;
+  height: 15rem;
+  text-align: center;
+}
+
+.details-main{
+  display: grid; 
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto; 
+  margin: 1rem;
+  width: 100rem;
+  height: 100rem;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2px; */
+  /* gap: 10%; */
+  /* margin-bottom: 10rem; */
+}
+
+.details-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 40rem;
+  overflow:hidden;
+  border-radius: 10px;
+  border: 5px solid rgb(36, 195, 22);
+  background-color: rgb(251, 249, 249);
+}
+
+#details-pic{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  margin-bottom: 2rem 0 8rem;
+  width: 38rem;
+  height: 22rem;
+  padding-bottom: .5rem;
+}
+
+#details-name{
+margin: 1rem 0 2rem;
+font-size: 3rem;
+color: rgb(87, 209, 30);
+}
+
+.details-title {
+  color: green;
+  font-size:x-large;
+  text-decoration: underline;
 }
