@@ -58,17 +58,17 @@ run:
 
 ### **_Screenshots_**
 
+> #### **Login Page**
+
+![image](./images/Login_Page.png)
+
 > #### **Home Page**
 
-![image]()
+![image](./images/Home_Page.png)
 
-> #### **Lost Pets Page**
+> #### **Lost Ones Page**
 
-![image]()
-
-> #### **Comments Page**
-
-![image]()
+![image](./images/Lost_Ones_Page.png)
 
 ### **_Task Lists_**
 
