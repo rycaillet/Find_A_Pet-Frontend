@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import Comments from '../components/Comments'
+import { DestroyListing } from '../services/Auth'
 
 const Base_URL = 'http://localhost:3001/api'
 
@@ -18,6 +19,12 @@ const LostOnesDetails = ({user}) => {
     // console.log(response.data)
     setLostOne(response.data)
   }
+
+  const handleDelete = async () => {
+        await DestroyListing({ id })
+        setLostOne()
+        navigate('/listing')
+      }
 
   const [comments, setComments] = useState(null)
 
@@ -36,6 +43,9 @@ const LostOnesDetails = ({user}) => {
         <header className='details-header'>
             <h1>Lost One</h1>
         </header>
+        <button onClick={handleDelete} id="delete-edit-button1">
+              Delete Listing
+            </button> 
     <main className='details-main'>
         <div className='details-card'>
           <h2 className='details-name'><span className='details-title'>Name:&nbsp;</span> {lostOne.petName}</h2>
@@ -44,12 +54,20 @@ const LostOnesDetails = ({user}) => {
           <h3><span className='details-title'>Sex:</span>&nbsp;{lostOne.sex}</h3>
           <h3><span className='details-title'>Species:</span> &nbsp;{lostOne.species}</h3>
           <h3><span className='details-title'>Last Seen:</span> &nbsp;{lostOne.lastSeen}</h3>
+          <div>
           <button
               id="view-pet-button"
               onClick={() => navigate(`/listing`)}
             >
               Go Back
             </button>
+            <button
+              id="view-pet-button"
+              onClick={() => navigate(`/listing/${id}/edit_listing`)}
+            >
+              Edit Info
+            </button>
+            </div>
         </div>
     </main>
     <header className='comment-header'>

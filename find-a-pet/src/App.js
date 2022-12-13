@@ -12,6 +12,8 @@ import LostOnesCard from './Pages/LostOnesCard'
 import LostOnesDetails from './components/LostOnesDetails'
 import NewCommentForm from './Pages/NewCommentForm'
 import EditCommentForm from './Pages/EditCommentForm'
+import NewListingForm from './Pages/NewListingForm'
+import EditListingForm from './Pages/EditListingForm'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -72,6 +74,12 @@ function App() {
                 <EditCommentForm user={user} authenticated={authenticated} />
               }
             />
+            <Route path="/listing/new_listing" element={<NewListingForm />} />
+            <Route
+              path="/listing/:listingId/edit_listing"
+              element={<EditListingForm />}
+            />
+
             <Route path="/register" element={<Register />} />
             <Route
               path="/login"

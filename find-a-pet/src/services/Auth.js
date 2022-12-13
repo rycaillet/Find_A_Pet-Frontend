@@ -67,18 +67,26 @@ export const DestroyComment = async (data) => {
   }
 }
 
-export const CreateListing = async () => {
+// export const CreateListing = async () => {
+//   try {
+//     const res = await Client.post(`/listing/new_listing`)
+//     return res.data
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
+export const CreateListing = async (data) => {
   try {
-    const res = await Client.post(`/listing/new_listing`)
+    const res = await Client.post(`/listing/new_listing`, data)
     return res.data
   } catch (error) {
     throw error
   }
 }
-
 export const UpdateListing = async (data) => {
   try {
-    const res = await Client.put(`/listing/${data.listingId}`, data)
+    const res = await Client.put(`/listing/${data.id}`, data)
     return res.data
   } catch (error) {
     throw error
@@ -86,8 +94,9 @@ export const UpdateListing = async (data) => {
 }
 
 export const DestroyListing = async (data) => {
+  console.log(data)
   try {
-    const res = await Client.delete(`/listing/${data.listingId}`, data)
+    const res = await Client.delete(`/listing/${data.id}`, data)
     return res.data
   } catch (error) {
     throw error

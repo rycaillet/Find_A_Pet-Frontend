@@ -1,14 +1,17 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { DestroyListing } from '../services/Auth'
 // import LostOnesDetails from '../components/LostOnesDetails'
 // import { Link } from 'react-router-dom'
 
 const Base_URL = 'http://localhost:3001/api'
 
 const LostOnesCard = () => {
+  let { id } = useParams()
   const navigate = useNavigate()
+
   const [lostOnes, setLostOnes] = useState([])
 
   const getLostOnes = async () => {
@@ -16,6 +19,11 @@ const LostOnesCard = () => {
     // console.log(response.data)
     setLostOnes(response.data)
   }
+
+  //   const handleDelete = async () => {
+  //     await DestroyListing({ id })
+  //     setLostOnes()
+  //   }
 
   useEffect(() => {
     getLostOnes()
@@ -26,6 +34,12 @@ const LostOnesCard = () => {
       <header className="lostOne-header">
         <h1>Lost Ones</h1>
       </header>
+      <button
+        id="view-pet-button"
+        onClick={() => navigate(`/listing/new_listing`)}
+      >
+        Add Your Pet
+      </button>
       <main className="lostOne-main">
         {lostOnes?.map((lostOne) => (
           //   <Link to={`/listing/${lostOne._id}`} key={lostOne._id}>
@@ -37,6 +51,9 @@ const LostOnesCard = () => {
             >
               View Pet
             </button>
+            {/* <button onClick={handleDelete} id="delete-edit-button">
+              Delete
+            </button> */}
             <img src={lostOne.petImage} alt="lostOne" id="lostOne-pic"></img>
           </div>
         ))}
