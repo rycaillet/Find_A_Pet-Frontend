@@ -25,12 +25,30 @@ const Home = ({ user, authenticated }) => {
       </header>
       <h2 id="reunited">Reunited Loved Ones</h2>
       <div className="gallery">
-        <img src="./images/frenchie-pic.png" alt="frenchie" />
-        <img src="./images/dogs-reunited.png" alt="dogs-reunited" />
-        <img src="./images/dogs-reunited2.png" alt="dogs-reunited2" />
-        <img src="./images/dogs-on-fence.png" alt="dogs-on-fence" />
-        <img src="./images/cat-photo.png" alt="cat-photo" />
-        <img src="./images/two-pitbulls.png" alt="pitbulls-photo" />
+        <img
+          src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="frenchie"
+        />
+        <img
+          src="https://images.pexels.com/photos/7210487/pexels-photo-7210487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="dogs-reunited"
+        />
+        <img
+          src="https://images.pexels.com/photos/8498519/pexels-photo-8498519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="dogs-reunited2"
+        />
+        <img
+          src="https://images.pexels.com/photos/1959052/pexels-photo-1959052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="dogs-on-fence"
+        />
+        <img
+          src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="cat-photo"
+        />
+        <img
+          src="https://images.pexels.com/photos/7107434/pexels-photo-7107434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="pitbulls-photo"
+        />
       </div>
     </div>
   ) : (

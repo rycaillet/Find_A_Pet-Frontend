@@ -52,7 +52,6 @@ const NewCommentForm = () => {
         <button type="submit" id="form-button">
           Submit
         </button>
-        {/* <input type="button" value="submit" /> */}
       </form>
     </div>
   )
