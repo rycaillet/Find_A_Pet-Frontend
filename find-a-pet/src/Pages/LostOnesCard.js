@@ -16,14 +16,8 @@ const LostOnesCard = () => {
 
   const getLostOnes = async () => {
     const response = await axios.get(`${Base_URL}/listing`)
-    // console.log(response.data)
     setLostOnes(response.data)
   }
-
-  //   const handleDelete = async () => {
-  //     await DestroyListing({ id })
-  //     setLostOnes()
-  //   }
 
   useEffect(() => {
     getLostOnes()
@@ -42,7 +36,6 @@ const LostOnesCard = () => {
       </button>
       <main className="lostOne-main">
         {lostOnes?.map((lostOne) => (
-          //   <Link to={`/listing/${lostOne._id}`} key={lostOne._id}>
           <div className="lostOne-card" key={lostOne.id}>
             <h2 id="lostOne-name">{lostOne.petName}</h2>
             <button
@@ -51,9 +44,6 @@ const LostOnesCard = () => {
             >
               View Pet
             </button>
-            {/* <button onClick={handleDelete} id="delete-edit-button">
-              Delete
-            </button> */}
             <img src={lostOne.petImage} alt="lostOne" id="lostOne-pic"></img>
           </div>
         ))}

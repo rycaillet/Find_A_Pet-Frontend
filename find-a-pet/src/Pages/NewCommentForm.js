@@ -3,7 +3,7 @@ import { CreateComment } from '../services/Auth'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-const NewCommentForm = ({ user, authenticated }) => {
+const NewCommentForm = () => {
   let navigate = useNavigate()
   let { listingId } = useParams()
   let { userId } = useParams()
@@ -31,9 +31,6 @@ const NewCommentForm = ({ user, authenticated }) => {
       <h1>Write A New Comment</h1>
       <form onSubmit={handleSubmit}>
         <div className="inputbox">
-          {/* <label htmlFor="comment">
-            Write A New Comment
-          </label> */}
           <input
             type="description"
             id="comment"

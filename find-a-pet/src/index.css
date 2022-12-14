@@ -27,20 +27,13 @@ html {
  ::-webkit-scrollbar {
   display: none;
 }
-/* ::-webkit-scrollbar-track {
-  background: rgb(71, 71, 71);
-}
-
-::-webkit-scrollbar-thumb {
-  background:#7d7d7d;
-  height: 2rem;
-}  */
 
 a {
   text-decoration: none;
 }
 
 /* login and register styling */
+
 .login-box {
    position: absolute;
    top: 50%;
@@ -91,6 +84,7 @@ a {
    color: rgba(48, 30, 248, 0.902);
    font-size: 15px;
 }
+
 #submit {
    padding: 10px 20px;
    color: #CBBDDB;
@@ -138,7 +132,6 @@ a {
 }
 #register {
    font-size: 14px;
-   /* font-weight:800; */
    text-decoration: none;
    color: #CBBDDB;
    margin: auto;
@@ -313,7 +306,6 @@ a {
 
 .about {
   display: flex;
-  /* width: 33.33%; */
   width: 25%;
   flex-direction: column;
   border: 1px solid grey;
@@ -350,15 +342,18 @@ img {
 }
 
 .pitbull {
-  background-color: #fec41f;
+  background-color: #010101;
+  color: rgb(22, 207, 22);
 }
 
 .cat {
-  background-color: #cf383b;
+  background-color: #010101;
+  color: rgb(22, 207, 22);
 }
 
 .view {
-  background-color: #0991bb;
+  background-color: #010101;
+  color: rgb(22, 207, 22);
 }
 
 h2 {
@@ -386,7 +381,7 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #fec41f;
+  background-color: #010101;
   border: none;
 }
 
@@ -396,9 +391,8 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #fec41f;
+  background-color: #010101;
   border: none;
-  background-color: #cf383b
 }
 
 .p3 {
@@ -407,9 +401,8 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #fec41f;
+  background-color: #010101;
   border: none;
-  background-color: #0991bb
 }
 
 #card {
@@ -613,23 +606,22 @@ footer a{
   background-image: url('../public/images/lostOnes-background.png');
   background-size:cover;
   background-position: center;
-  /* height: 100vh; */
 }
 
 .lostOne-header{
   display: flex;
   flex-direction: column;
   font-size:x-large;
-  padding-top: 1.6rem;
   margin: 2rem;
-  color:rgb(246, 246, 246);
+  color:rgb(31, 227, 31);
   font-weight:bolder;
   font-size: xx-large;
-  border: 1px solid rgb(250, 255, 249);
+  letter-spacing: 6px;
+  border: 2px solid rgb(66, 220, 35);
   border-radius: 10px;
-  background-color: #7d7d7d;
+  background-color: #030303;
   width: 25rem;
-  height: 9rem;
+  height: 5.4rem;
   text-align: center;
 }
 
@@ -642,7 +634,6 @@ footer a{
   height: 100rem;
   justify-content: center;
   align-items: center;
-  /* padding: 2px; */
   gap: 10%;
   margin-bottom: 10rem;
 }
@@ -722,12 +713,8 @@ color: rgb(87, 209, 30);
   font-size:x-large;
   padding-top: 1.6rem;
   margin: 2rem;
-  /* color:rgb(246, 246, 246); */
   font-weight:bolder;
   font-size: xx-large;
-  /* border: 1px solid rgb(250, 255, 249); */
-  /* border-radius: 10px; */
-  /* background-color: #7d7d7d; */
   width: 25rem;
   height: 15rem;
   text-align: center;
@@ -742,9 +729,6 @@ color: rgb(87, 209, 30);
   height: 100rem;
   justify-content: center;
   align-items: center;
-  /* padding: 2px; */
-  /* gap: 10%; */
-  /* margin-bottom: 10rem; */
 }
 
 .details-card{
@@ -758,8 +742,6 @@ color: rgb(87, 209, 30);
   border-radius: 10px;
   border: 5px solid rgb(36, 195, 22);
   background-color: rgb(251, 249, 249);
-  /* padding:3rem;
-  margin:3rem; */
 }
 
 #details-pic{
@@ -829,14 +811,8 @@ color: rgb(87, 209, 30);
   display: flex;
   flex-direction: column;
   font-size:x-large;
-  /* padding-bottom:; */
-  /* margin: 2rem; */
-  /* color:rgb(246, 246, 246); */
   font-weight:bolder;
   font-size: large;
-  /* border: 1px solid rgb(250, 255, 249); */
-  /* border-radius: 10px; */
-  /* background-color: #7d7d7d; */
   width: 25rem;
   height: 12rem;
   text-align: center;
@@ -866,7 +842,6 @@ color: rgb(22, 25, 208);
   transition: .5s;
   letter-spacing: 5px;
   border: 1px solid rgb(13, 59, 211);
-  /* margin: .1rem; */
   cursor: pointer;
 }
 

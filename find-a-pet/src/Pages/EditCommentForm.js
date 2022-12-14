@@ -28,10 +28,6 @@ const EditCommentForm = () => {
     getCommentById()
   }, [commentId])
 
-  //   const handleRefresh = () => {
-  //     window.location.reload(false)
-  //   }
-
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
@@ -40,7 +36,6 @@ const EditCommentForm = () => {
     e.preventDefault()
     await UpdateComment({ ...formState })
     navigate(`/listing/${listingId}`)
-    // handleRefresh()
   }
 
   return (
@@ -48,9 +43,6 @@ const EditCommentForm = () => {
       <h1>Have An Update For This Pet?</h1>
       <form onSubmit={handleSubmit}>
         <div className="inputbox">
-          {/* <label htmlFor="comment">
-            Write A New Comment
-          </label> */}
           <input
             type="description"
             id="comment"
@@ -72,7 +64,6 @@ const EditCommentForm = () => {
         <button type="submit" id="form-button">
           Submit
         </button>
-        {/* <input type="button" value="submit" /> */}
       </form>
     </div>
   )

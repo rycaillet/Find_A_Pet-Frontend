@@ -16,7 +16,6 @@ const LostOnesDetails = ({user}) => {
 
   const getLostOnesById = async () => {
     const response = await axios.get(`${Base_URL}/listing/${id}`)
-    // console.log(response.data)
     setLostOne(response.data)
   }
 
@@ -88,7 +87,6 @@ const LostOnesDetails = ({user}) => {
         <button
             id="view-pet-button"
             onClick={() => navigate(`/new_comment/user/${user.id}/listing/${id}`)}
-            // onClick={() => navigate(`/new_comment`)}
             >
             Add A Comment
         </button>

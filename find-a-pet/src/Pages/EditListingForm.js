@@ -29,10 +29,6 @@ const EditListingForm = () => {
     getListingById()
   }, [listingId])
 
-  //   const handleRefresh = () => {
-  //     window.location.reload(false)
-  //   }
-
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
@@ -41,7 +37,6 @@ const EditListingForm = () => {
     e.preventDefault()
     await UpdateListing({ ...formState })
     navigate(`/listing/${listingId}`)
-    // handleRefresh()
   }
 
   return (
@@ -49,7 +44,6 @@ const EditListingForm = () => {
       <h1>Need To Update Your Info?</h1>
       <form onSubmit={handleSubmit}>
         <div className="inputbox1">
-          {/* <label htmlFor="petName">Name Of Your Pet:</label> */}
           <input
             type="text"
             name="petName"
@@ -62,7 +56,6 @@ const EditListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="petImage">Image Of Your Pet:</label> */}
           <input
             type="text"
             name="petImage"
@@ -75,7 +68,6 @@ const EditListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="description">Describe Your Pet:</label> */}
           <input
             name="description"
             cols="60"
@@ -89,7 +81,6 @@ const EditListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="sex">:</label> */}
           <input
             type="text"
             name="sex"
@@ -102,7 +93,6 @@ const EditListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="species">Species:</label> */}
           <input
             type="text"
             name="species"
@@ -115,7 +105,6 @@ const EditListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="lastSeen">Species:</label> */}
           <input
             type="text"
             name="lastSeen"
@@ -136,7 +125,6 @@ const EditListingForm = () => {
         <button type="submit" id="form-button1">
           Submit
         </button>
-        {/* <input type="button" value="submit" /> */}
       </form>
     </div>
   )

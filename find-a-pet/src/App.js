@@ -63,7 +63,6 @@ function App() {
             />
             <Route
               path="/new_comment/user/:userId/listing/:listingId"
-              // path="/new_comment"
               element={
                 <NewCommentForm user={user} authenticated={authenticated} />
               }

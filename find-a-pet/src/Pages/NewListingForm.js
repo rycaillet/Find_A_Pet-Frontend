@@ -1,7 +1,7 @@
 import React from 'react'
 import { CreateListing } from '../services/Auth'
 import { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const NewListingForm = () => {
   let navigate = useNavigate()
@@ -32,7 +32,6 @@ const NewListingForm = () => {
       <h1>Tell Us About Your Lost One</h1>
       <form onSubmit={handleSubmit}>
         <div className="inputbox1">
-          {/* <label htmlFor="petName">Name Of Your Pet:</label> */}
           <input
             type="text"
             name="petName"
@@ -45,7 +44,6 @@ const NewListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="petImage">Image Of Your Pet:</label> */}
           <input
             type="text"
             name="petImage"
@@ -58,7 +56,6 @@ const NewListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="description">Describe Your Pet:</label> */}
           <input
             name="description"
             cols="60"
@@ -72,7 +69,6 @@ const NewListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="sex">:</label> */}
           <input
             type="text"
             name="sex"
@@ -85,7 +81,6 @@ const NewListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="species">Species:</label> */}
           <input
             type="text"
             name="species"
@@ -98,7 +93,6 @@ const NewListingForm = () => {
           />
         </div>
         <div className="inputbox1">
-          {/* <label htmlFor="lastSeen">Species:</label> */}
           <input
             type="text"
             name="lastSeen"
@@ -116,7 +110,6 @@ const NewListingForm = () => {
         <button type="submit" id="form-button1">
           Submit
         </button>
-        {/* <input type="button" value="submit" /> */}
       </form>
     </div>
   )
