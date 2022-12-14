@@ -3,7 +3,7 @@ import React from 'react'
 const AboutUs = () => {
   return (
     <div id="about">
-      <div class="about pitbull">
+      <div className="about pitbull">
         <img
           src="https://images.pexels.com/photos/1124002/pexels-photo-1124002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="pitbull img"
@@ -30,7 +30,7 @@ const AboutUs = () => {
           them around your neighborhood.
         </p>
       </div>
-      <div class="about view">
+      <div className="about view">
         <img
           src="https://images.pexels.com/photos/1975989/pexels-photo-1975989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="dog-view"
