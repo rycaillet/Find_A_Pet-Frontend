@@ -16,7 +16,7 @@ const AboutUs = () => {
           finding your lost pet.
         </p>
       </div>
-      <div class="about cat">
+      <div className="about cat">
         <img
           src="https://images.pexels.com/photos/14639094/pexels-photo-14639094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="sad-cat"
