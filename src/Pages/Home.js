@@ -30,7 +30,7 @@ const Home = ({ user, authenticated }) => {
           alt="frenchie"
         />
         <img
-          src="https://images.pexels.com/photos/7210487/pexels-photo-7210487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.pexels.com/photos/8734473/pexels-photo-8734473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="dogs-reunited"
         />
         <img
@@ -48,6 +48,14 @@ const Home = ({ user, authenticated }) => {
         <img
           src="https://images.pexels.com/photos/7107434/pexels-photo-7107434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="pitbulls-photo"
+        />
+        <img
+          src="https://images.pexels.com/photos/3631659/pexels-photo-3631659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="two-small-dogs-photo"
+        />
+        <img
+          src="https://images.pexels.com/photos/6864011/pexels-photo-6864011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="black-cat-photo"
         />
       </div>
     </div>
