@@ -303,32 +303,136 @@ a {
 
 /* About Us */
 
-#aU-container{
+#about {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* margin: 10rem auto; */
+  justify-content: space-around;
   background-image: url('../public/images/About-image.png');
   background-size:cover;
   background-position: center;
-  height: 100vh;
 }
 
-#aU-text{
-  margin: 2rem 10rem;
-  color: white;
-  font-size: 2rem;
-  display:flex;
+.about {
+  display: flex;
+  /* width: 33.33%; */
+  width: 25%;
   flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
+  border: 1px solid grey;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: grey;
 }
 
-#about-h1 {
-  padding-top: 1rem;
-  margin: .5rem 6rem;
+#aboutus {
+  font-family: "Baloo Bhai 2", cursive;
+  font-family: "Saira Stencil One", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+
+h2 {
+  text-align: center;
+}
+
+footer {
+  background-color: #232323;
   color: white;
-  font-size: 3.5rem;
+  font-size: 90%;
+  letter-spacing: 0.5;
+  text-align: center;
+  padding: 2% 0%;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+.pitbull {
+  background-color: #fec41f;
+}
+
+.cat {
+  background-color: #cf383b;
+}
+
+.view {
+  background-color: #0991bb;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+}
+
+.heading {
+  font-family: "Baloo Bhai 2", cursive;
+  margin: 0.5rem;
+  font-size: 2rem;
+  display: flex;
+  width: 100%;
+}
+
+.p1 {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fec41f;
+  border: none;
+}
+
+.p2 {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fec41f;
+  border: none;
+  background-color: #cf383b
+}
+
+.p3 {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fec41f;
+  border: none;
+  background-color: #0991bb
+}
+
+#card {
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-top: 1px solid grey;
+    padding-top: 2rem;
+  }
+
+  p {
+    border: none;
+  }
 }
 
 /* Home Page */
@@ -609,7 +713,7 @@ color: rgb(87, 209, 30);
   background-image: url('../public/images/details-background.png');
   background-size:cover;
   background-position: center;
-  height: 160vh;
+  height: 170vh;
 }
 
 .details-header{
@@ -633,7 +737,7 @@ color: rgb(87, 209, 30);
   display: grid; 
   grid-template-rows: auto auto auto;
   grid-template-columns: auto auto auto; 
-  margin: 1rem;
+  margin: .5rem;
   width: 100rem;
   height: 100rem;
   justify-content: center;
@@ -649,7 +753,7 @@ color: rgb(87, 209, 30);
   justify-content: center;
   align-items: center;
   width: 50rem;
-  height: 33rem;
+  height: 36rem;
   overflow:hidden;
   border-radius: 10px;
   border: 5px solid rgb(36, 195, 22);
