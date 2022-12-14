@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import Comments from './Comments'
 import { DestroyListing } from '../services/Auth'
-
-const Base_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../globals'
 
 const LostOnesDetails = ({user}) => {
   let navigate = useNavigate()
@@ -15,7 +14,7 @@ const LostOnesDetails = ({user}) => {
   const [lostOne, setLostOne] = useState([])
 
   const getLostOnesById = async () => {
-    const response = await axios.get(`${Base_URL}/listing/${id}`)
+    const response = await axios.get(`${BASE_URL}/listing/${id}`)
     setLostOne(response.data)
   }
 
@@ -28,7 +27,7 @@ const LostOnesDetails = ({user}) => {
   const [comments, setComments] = useState(null)
 
   const getComments = async () => {
-    const response = await axios.get(`${Base_URL}/comment/`)
+    const response = await axios.get(`${BASE_URL}/comment/`)
     setComments(response.data)
   }
 
