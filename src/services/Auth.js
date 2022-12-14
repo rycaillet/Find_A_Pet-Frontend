@@ -76,7 +76,6 @@ export const UpdateListing = async (data) => {
 }
 
 export const DestroyListing = async (data) => {
-  console.log(data)
   try {
     const res = await Client.delete(`/listing/${data.id}`, data)
     return res.data
