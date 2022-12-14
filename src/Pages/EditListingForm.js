@@ -3,8 +3,7 @@ import { UpdateListing } from '../services/Auth'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-
-const Base_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../globals'
 
 const EditListingForm = () => {
   let navigate = useNavigate()
@@ -23,7 +22,7 @@ const EditListingForm = () => {
 
   useEffect(() => {
     const getListingById = async () => {
-      const response = await axios.get(`${Base_URL}/listing/${listingId}`)
+      const response = await axios.get(`${BASE_URL}/listing/${listingId}`)
       setFormState(response.data)
     }
     getListingById()

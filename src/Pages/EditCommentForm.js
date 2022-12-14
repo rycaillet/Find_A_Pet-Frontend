@@ -3,8 +3,7 @@ import { UpdateComment } from '../services/Auth'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-
-const Base_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../globals'
 
 const EditCommentForm = () => {
   let navigate = useNavigate()
@@ -22,7 +21,7 @@ const EditCommentForm = () => {
 
   useEffect(() => {
     const getCommentById = async () => {
-      const response = await axios.get(`${Base_URL}/comment/${commentId}`)
+      const response = await axios.get(`${BASE_URL}/comment/${commentId}`)
       setFormState(response.data)
     }
     getCommentById()

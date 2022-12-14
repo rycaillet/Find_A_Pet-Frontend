@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import Comments from '../components/Comments'
+import Comments from './Comments'
 import { DestroyListing } from '../services/Auth'
 
 const Base_URL = 'http://localhost:3001/api'

@@ -1,21 +1,16 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
-import { DestroyListing } from '../services/Auth'
-// import LostOnesDetails from '../components/LostOnesDetails'
-// import { Link } from 'react-router-dom'
-
-const Base_URL = 'http://localhost:3001/api'
+import { useNavigate } from 'react-router-dom'
+import { BASE_URL } from '../globals'
 
 const LostOnesCard = () => {
-  let { id } = useParams()
   const navigate = useNavigate()
 
   const [lostOnes, setLostOnes] = useState([])
 
   const getLostOnes = async () => {
-    const response = await axios.get(`${Base_URL}/listing`)
+    const response = await axios.get(`${BASE_URL}/listing`)
     setLostOnes(response.data)
   }
 
