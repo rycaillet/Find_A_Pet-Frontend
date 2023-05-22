@@ -575,6 +575,8 @@ margin-bottom: 20px;
 }
 .main-footer ul{
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .main-footer h1{
   font-size: 22px;
@@ -611,6 +613,7 @@ footer a{
 .contact-details{
   list-style: none;
   margin: 10px 0;
+  padding: 0;
 }
 .contact-details li a{
   text-decoration: none;
@@ -622,12 +625,15 @@ footer a{
 }
 .sociallogos{
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sociallogos .logobox a{
   padding: 0 10px ;
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 22px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 22px;
 }
 .com ul li{
   padding: 5px 0;
@@ -637,9 +643,16 @@ footer a{
       padding: 20px;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 20px
   }
   .info{
       padding: 20px 0;
+  }
+  .sociallogos {
+    justify-content: flex-start;
+  }
+  .com {
+    padding: 20px 0;
   }
 }
 @media (max-width: 480px){
@@ -648,6 +661,7 @@ footer a{
   }
   .sociallogos{
       padding: 20px 0;
+      justify-content: center;
   }
   .com{
       padding: 20px 0;
