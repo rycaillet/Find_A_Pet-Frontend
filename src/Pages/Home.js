@@ -24,7 +24,7 @@ const Home = ({ user, authenticated }) => {
         </button>
       </header>
       <h2 id="reunited">Reunited Loved Ones</h2>
-      <p>*scroll to see Reunited Loved Ones</p>
+      <p id="reunited-p">*scroll to see Reunited Loved Ones</p>
       <div className="gallery">
         <img
           src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
