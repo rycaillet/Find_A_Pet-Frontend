@@ -959,7 +959,7 @@ color: rgb(22, 25, 208);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   max-width: 30rem;
   overflow: hidden;
   border-radius: 10px;
@@ -967,6 +967,7 @@ color: rgb(22, 25, 208);
   background-color: rgb(251, 249, 249);
   margin-bottom: 2rem;
   padding: 2rem;
+  text-align: center;
 }
 
 #details-pic {
@@ -1053,6 +1054,7 @@ color: rgb(22, 25, 208);
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .details-title span {
