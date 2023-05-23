@@ -956,7 +956,8 @@ color: rgb(22, 25, 208);
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
   gap: 1rem;
-  margin: 1rem;
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 .details-card {
