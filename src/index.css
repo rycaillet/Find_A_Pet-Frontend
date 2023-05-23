@@ -953,7 +953,8 @@ color: rgb(22, 25, 208);
 
 .details-main {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-items: center;
   gap: 1rem;
   margin: 1rem;
 }
@@ -971,6 +972,8 @@ color: rgb(22, 25, 208);
   border: 5px solid rgb(36, 195, 22);
   background-color: rgb(251, 249, 249);
   margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 #details-pic {
