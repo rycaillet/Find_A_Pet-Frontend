@@ -1837,9 +1837,10 @@ color: rgb(22, 25, 208);
   height: 70vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .center1 h1 {
@@ -1851,13 +1852,17 @@ color: rgb(22, 25, 208);
   margin-bottom: 30px;
   font-weight: bold;
   padding-left: 20px;
+  flex-basis: 100%;
 }
 
 .center1 .inputbox1 {
   position: relative;
+  left: 10px;
   width: 80%;
+  height: 20px;
   padding: 1.5rem;
   margin: 1.8rem;
+  flex-basis: 100%;
 }
 
 .center1 .inputbox1 input {
@@ -1895,7 +1900,7 @@ color: rgb(22, 25, 208);
 #form-button1 {
   padding: 4px 8px;
   height: 2.5rem;
-  width: 10rem;
+  width: 100%;
   color: #CBBDDB;
   font-size: 12px;
   text-decoration: none;
@@ -1917,6 +1922,9 @@ color: rgb(22, 25, 208);
 
 @media only screen and (max-width: 480px) {
   .center1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
   }
 
