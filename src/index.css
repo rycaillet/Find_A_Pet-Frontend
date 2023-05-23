@@ -1610,7 +1610,7 @@ color: rgb(22, 25, 208);
 }
 
 .center .inputbox input {
-  width: 500px;
+  width: 100%;
   border: 2px solid #000;
   outline: none;
   background: none;
