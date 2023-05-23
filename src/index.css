@@ -1454,6 +1454,7 @@ color: rgb(22, 25, 208);
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  overflow-x: auto;
 }
 
 .center h1 {
@@ -1552,7 +1553,7 @@ color: rgb(22, 25, 208);
   .center {
     flex-direction: column;
     padding: 20px;
-    height: auto;
+    overflow-x: hidden;
   }
 
   .center h1 {
