@@ -54,13 +54,15 @@ const LostOnesDetails = ({user}) => {
           <h3><span className='details-title'>Last Seen:</span> &nbsp;{lostOne.lastSeen}</h3>
           <div>
           <button
-              id="view-pet-button"
+              // id="view-pet-button"
+              id="details-edit-button"
               onClick={() => navigate(`/listing`)}
             >
               Go Back
             </button>
             <button
-              id="view-pet-button"
+              // id="view-pet-button"
+              id="details-edit-button"
               onClick={() => navigate(`/listing/${id}/edit_listing`)}
             >
               Edit Info
