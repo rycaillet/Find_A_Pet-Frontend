@@ -1850,6 +1850,7 @@ color: rgb(22, 25, 208);
   font-weight: bold;
   padding-left: 20px;
   width: 100%;
+  text-align: center;
 }
 
 .center1 .inputbox1 {
@@ -1903,7 +1904,7 @@ color: rgb(22, 25, 208);
   }
 
   #form-button1 {
-    width: 100%;
+    width: calc(100% - 2rem);
     font-size: 0.8em;
   }
 }
