@@ -929,7 +929,7 @@ color: rgb(22, 25, 208);
   0 0 100px rgb(13, 59, 211);
 } */
 
-.details-container {
+/* .details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1118,7 +1118,210 @@ color: rgb(22, 25, 208);
     0 0 25px rgb(13, 59, 211),
     0 0 50px rgb(13, 59, 211),
     0 0 100px rgb(13, 59, 211);
+} */
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.pexels.com/photos/8499427/pexels-photo-8499427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
+
+.details-header {
+  font-size: 2rem;
+  margin: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.details-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 30rem;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 5px solid rgb(36, 195, 22);
+  background-color: rgb(251, 249, 249);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+#details-pic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 18rem;
+  margin-top: 2px;
+}
+
+#details-name {
+  margin: 1rem 0 2rem;
+  font-size: 2rem;
+  color: rgb(87, 209, 30);
+}
+
+#delete-edit-button1 {
+  padding: 8px 10px;
+  height: 3.8rem;
+  width: 10rem;
+  color: #CBBDDB;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  border: 1px solid rgb(241, 59, 9);
+  margin: .2rem;
+  cursor: pointer;
+}
+
+#details-edit-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  height: 2.5rem;
+  width: 10rem;
+  color: #CBBDDB;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 3px;
+  border: 1px solid rgb(37, 179, 75);
+  margin: 2rem;
+  cursor: pointer;
+}
+
+#details-edit-button:hover {
+  background: rgb(37, 179, 75);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0 0 5px rgb(37, 179, 75),
+    0 0 25px rgb(37, 179, 75),
+    0 0 50px rgb(37, 179, 75),
+    0 0 100px rgb(37, 179, 75);
+}
+
+#details-edit-button button {
+  margin-right: 1rem;
+}
+
+#delete-edit-button1:hover {
+  background: rgb(241, 59, 9);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0 0 5px rgb(241, 59, 9),
+    0 0 25px rgb(241, 59, 9),
+    0 0 50px rgb(241, 59, 9),
+    0 0 100px rgb(241, 59, 9);
+}
+
+.details-title {
+  color: green;
+  font-size: 2rem;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-title span {
+  margin-right: 1rem;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid rgb(21, 49, 205);
+  height: 17rem;
+  width: 90vw;
+  max-width: 50rem;
+  padding: 2rem;
+}
+
+.comment-header {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 25rem;
+  text-align: center;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.anonymous-posted {
+  margin: 1rem 0 2rem;
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: rgb(22, 25, 208);
+}
+
+#delete-edit-button {
+  padding: 2px 4px;
+  height: 2rem;
+  width: 6rem;
+  color: #CBBDDB;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 5px;
+  border: 1px solid rgb(13, 59, 211);
+  cursor: pointer;
+}
+
+#delete-edit-button:hover {
+  background: rgb(13, 59, 211);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0 0 5px rgb(13, 59, 211),
+    0 0 25px rgb(13, 59, 211),
+    0 0 50px rgb(13, 59, 211),
+    0 0 100px rgb(13, 59, 211);
+}
+
+@media only screen and (max-width: 768px) {
+  .details-main {
+    grid-template-columns: 1fr;
+  }
+
+  .details-card {
+    max-width: 90vw;
+  }
+}
+
 
 /* New Comment Form  */
 
