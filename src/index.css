@@ -1315,6 +1315,7 @@ color: rgb(22, 25, 208);
 @media only screen and (max-width: 768px) {
   .details-main {
     grid-template-columns: 1fr;
+    max-width: 95%;
   }
 
   .details-card {
@@ -1332,6 +1333,9 @@ color: rgb(22, 25, 208);
 @media (max-width: 480px) {
   .details-card {
     max-width: 90%;
+  }
+  .details-main {
+    max-width: 95%;
   }
 }
 
