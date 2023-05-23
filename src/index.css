@@ -1316,11 +1316,13 @@ color: rgb(22, 25, 208);
   .details-main {
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); 
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .details-card {
     max-width: 40rem;
-    width: 90%;
+    width: 100%;
   }
 
   #details-name,
