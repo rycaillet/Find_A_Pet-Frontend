@@ -1444,7 +1444,7 @@ color: rgb(22, 25, 208);
   0 0 100px rgb(13, 59, 211);
 } */
 
-.center {
+/* .center {
   position: relative;
   padding: 50px;
   background: #fff;
@@ -1551,9 +1551,7 @@ color: rgb(22, 25, 208);
 
 @media only screen and (max-width: 480px) {
   .center {
-    flex-direction: column;
     padding: 20px;
-    overflow-x: hidden;
   }
 
   .center h1 {
@@ -1578,6 +1576,122 @@ color: rgb(22, 25, 208);
   #form-button {
     font-size: 0.8em;
     width: 100%;
+  }
+} */
+
+.center {
+  position: relative;
+  padding: 50px;
+  background: #fff;
+  border-radius: 10px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid dodgerblue;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.center .inputbox {
+  position: relative;
+  left: 20px;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.center .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+
+.center .inputbox:last-child {
+  margin-bottom: 0;
+}
+
+.center .inputbox span {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+}
+
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button-group button {
+  width: 100%;
+  background: dodgerblue;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+@media only screen and (max-width: 480px) {
+  .center {
+    padding: 20px;
+  }
+
+  .center h1 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  .center .inputbox {
+    width: calc(100% - 40px);
+  }
+
+  .center .inputbox input {
+    font-size: 1em;
+  }
+
+  .button-group button {
+    font-size: 0.8em;
   }
 }
 
