@@ -54,15 +54,17 @@ const EditCommentForm = () => {
             className="input"
           />
         </div>
-        <button
-          id="form-button"
-          onClick={() => navigate(`/listing/${listingId}`)}
-        >
-          Go Back
-        </button>
-        <button type="submit" id="form-button">
-          Submit
-        </button>
+        <div className="button-group">
+          <button
+            id="form-button"
+            onClick={() => navigate(`/listing/${listingId}`)}
+          >
+            Go Back
+          </button>
+          <button type="submit" id="form-button">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   )
