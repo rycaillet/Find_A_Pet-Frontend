@@ -1563,7 +1563,6 @@ color: rgb(22, 25, 208);
 
   .center .inputbox {
     width: calc(100% - 40px);
-    margin-bottom: 30px;
   }
 
   .center .inputbox input {
@@ -1571,7 +1570,7 @@ color: rgb(22, 25, 208);
   }
 
   .center .inputbox [type="button"] {
-    width: 100%;
+    width: calc(50% - 8px);
   }
 
   #form-button {
