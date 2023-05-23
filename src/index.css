@@ -1486,6 +1486,7 @@ color: rgb(22, 25, 208);
   padding: 10px;
   border-radius: 10px;
   font-size: 1.2em;
+  box-sizing: border-box;
 }
 
 .center .inputbox:last-child {
@@ -1512,6 +1513,7 @@ color: rgb(22, 25, 208);
   background: dodgerblue;
   color: #fff;
   border: #fff;
+  box-sizing: border-box;
 }
 
 .center .inputbox:hover [type="button"] {
@@ -1532,6 +1534,7 @@ color: rgb(22, 25, 208);
   border: 1px solid rgb(13, 59, 211);
   margin: .5rem;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 #form-button:hover {
