@@ -20,6 +20,10 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  max-width: 100%
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1318,15 +1322,13 @@ color: rgb(22, 25, 208);
   }
 
   .details-card {
-    width: 100%;
+    max-width: 40rem;
+    width: 90%;
   }
 
   #details-name,
   #details-pic,
-  #details-description,
-  .details-title,
-  #delete-edit-button1,
-  #details-edit-button {
+  #details-description {
     width: 100%;
   }
 }
