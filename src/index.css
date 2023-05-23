@@ -1804,3 +1804,33 @@ color: rgb(22, 25, 208);
   0 0 50px rgb(13, 59, 211),
   0 0 100px rgb(13, 59, 211);
 }
+
+@media only screen and (max-width: 480px) {
+  .center1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .center1 h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .center1 .inputbox1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .center1 .inputbox1 input {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  #form-button1 {
+    width: 100%;
+    font-size: 0.8em;
+  }
+}
