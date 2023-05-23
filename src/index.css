@@ -1321,6 +1321,15 @@ color: rgb(22, 25, 208);
     max-width: 40rem;
     width: 90%;
   }
+
+  #details-name,
+  #details-pic,
+  #details-description,
+  .details-title,
+  #delete-edit-button1,
+  #details-edit-button {
+    width: 100%;
+  }
 }
 
 
