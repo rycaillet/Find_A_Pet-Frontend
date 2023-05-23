@@ -1696,12 +1696,13 @@ color: rgb(22, 25, 208);
   .center {
     justify-content: center;
     align-items: center;
-    max-width: 600px;
+    width: 600px;
+    max-width: 100%;
   }
 
   .center .inputbox input {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
   }
 }
 
