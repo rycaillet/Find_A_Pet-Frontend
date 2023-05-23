@@ -1848,8 +1848,8 @@ color: rgb(22, 25, 208);
   letter-spacing: 3px;
   margin-bottom: 30px;
   font-weight: bold;
-  padding-left: 20px;
-  width: 100%;
+  /* padding-left: 20px;
+  width: 100%; */
   text-align: center;
 }
 
